@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise - Team 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E7D32;
+            --secondary-color: #A5D6A7;
+            --accent-color: #1B5E20;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: 600;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            display: inline-block;
+            margin-bottom: 40px;
+            padding-bottom: 10px;
+        }
+
+        .arch-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .app-screenshot {
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            max-height: 550px;
+            width: auto;
+            border: 8px solid #333;
+            transition: transform 0.3s ease;
+        }
+
+        .app-screenshot:hover {
+            transform: scale(1.02);
+        }
+
+        .feature-row {
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="image3.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top me-2 rounded">
+                SpendWise <span class="badge bg-light text-success ms-2">Fall 2025 CS 2340 Team 1</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#architecture">Architecture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ui-tour">UI Tour</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <img src="image3.png" alt="SpendWise Logo" class="mb-4 rounded shadow-lg" style="width: 120px; height: 120px;">
+            <h1 class="display-4 fw-bold mb-3">Spend... wisely</h1>
+            <p class="lead mb-4">Track expenses, set budgets, and create saving circles with your friends</p>
+            <a href="#demo" class="btn btn-light btn-lg text-success fw-bold px-5">Watch Demo</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section id="architecture" class="mb-5 bg-white p-5 rounded shadow-sm">
+            <h2 class="section-title">Technical Architecture</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h4>MVVM & Design Patterns</h4>
+                    <p>Our app follows the <strong>MVVM architecture</strong> to decouple UI from logic. We also utilize various design patterns that we learned over the semester. For example, the <strong>Singleton pattern</strong> for single instance access to Firebase and Firestore.</p>
+                    <div class="mt-2">
+                        <span class="arch-badge">MVVM</span>
+                        <span class="arch-badge">Singleton</span>
+                        <span class="arch-badge">Architecture</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Local AI Integration</h4>
+                    <p>Unlike other apps, we locally run a <strong>Local Llama 3.2 model</strong> for the chatbot. This ensures financial queries are processed privately without external API dependencies. Feel free to talk to the chatbot about your deepest, darkest insecurities and worries.</p>
+                    <div class="mt-2">
+                        <span class="arch-badge">Llama 3.2</span>
+                        <span class="arch-badge">Privacy First</span>
+                        <span class="arch-badge">Gippity</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Performance UI</h4>
+                    <p>We use highly optimized <strong>RecyclerViews with custom Adapters</strong> to render extensive lists of transaction history and budget items without UI lag.</p>
+                    <div class="mt-2">
+                        <span class="arch-badge">RecyclerView</span>
+                        <span class="arch-badge">Adapters</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Backend & Sync</h4>
+                    <p><strong>Firebase Firestore</strong> handles data in real-time, syncing user budgets and allows users to collborate across Savings Circles with ease.</p>
+                    <div class="mt-2">
+                        <span class="arch-badge">Firebase</span>
+                        <span class="arch-badge">Firestore</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ui-tour" class="mb-5">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Application Tour</h2>
+                <p class="lead text-muted">A walkthrough of the key modules in SpendWise.</p>
+            </div>
+
+            <div class="row feature-row">
+                <div class="col-md-6 order-md-1 text-center">
+                    <img src="image6.png" alt="Dashboard Screen" class="app-screenshot img-fluid">
+                </div>
+                <div class="col-md-6 order-md-2 ps-md-5">
+                    <h3>Visual Dashboard</h3>
+                    <p class="lead">Budgeting doesn't need to be hard</p>
+                    <p>Our dashboard aggregates all your financial data into clear, interactive visualizations using <strong>MPAndroidChart</strong>.</p>
+                    <ul>
+                        <li><strong>Pie Chart:</strong> Breakdown of spending by category</li>
+                        <li><strong>Bar Chart:</strong> Compare budget limits vs actual spending.</li>
+                        <li><strong>Calendar:</strong> Switch between dates to see historical data.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row feature-row">
+                <div class="col-md-6 order-md-2 text-center">
+                    <img src="image9.png" alt="Expense Log Screen" class="app-screenshot img-fluid">
+                </div>
+                <div class="col-md-6 order-md-1 pe-md-5">
+                    <h3>Comprehensive Expense Log</h3>
+                    <p class="lead">Every penny accounted for</p>
+                    <p>The Expense Log uses a <strong>RecyclerView</strong> to handle unlimited transaction entries.</p>
+                    <ul>
+                        <li><strong>Add:</strong> Use the floating action button to log expenses</li>
+                        <li><strong>Details:</strong> See amounts, categories, and dates at a glance.</li>
+                        <li><strong>Sorting:</strong> Automatically sorted by date for easy tracking.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row feature-row">
+                <div class="col-md-6 order-md-1 text-center">
+                    <img src="image.png" alt="Chatbot Screen" class="app-screenshot img-fluid">
+                </div>
+                <div class="col-md-6 order-md-2 ps-md-5">
+                    <h3>Smart AI Assistant</h3>
+                    <p class="lead">Your personal financial advisor, running locally.</p>
+                    <p>Chat with our integrated AI to get insights without leaving the app. Powered by <strong>Llama 3.2</strong>.</p>
+                    <ul>
+                        <li><strong>Financial Overviews:</strong> Ask "Give me an overview" to get a summary of your income vs. expenses.</li>
+                        <li><strong>Budgeting Tips:</strong> Get personalized advice on how to save more.</li>
+                        <li><strong>Context Aware:</strong> The bot understands your current budget context.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row feature-row">
+                <div class="col-md-6 order-md-2 text-center">
+                    <img src="image8.png" alt="Avatar Selection" class="app-screenshot img-fluid">
+                </div>
+                <div class="col-md-6 order-md-1 pe-md-5">
+                    <h3>Profile & Customization</h3>
+                    <p class="lead">Make your profile picture a cute animal</p>
+                    <p>SpendWise has accounts, and they can be customized!</p>
+                    <ul>
+                        <li><strong>Avatars:</strong> Choose from a variety of fun 3D avatars (Dinos, Foxes, Rabbits) to represent your profile in Savings Circles.</li>
+                        <li><strong>Stats:</strong> View your total expenses logged and budgets created in the Profile tab.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="demo" class="mb-5 text-center">
+            <h2 class="section-title">Project Demo</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="video-container">
+                        <iframe id="player"
+                                title="SpendWise Demo Video"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">Created by Team 1 for SpendWise Project</p>
+            <small class="text-muted">© 2025 All Rights Reserved</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Hardcoded Video ID
+        const v = 'XnO6BE1Sdmk';
+
+        const base = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(v);
+        const params = new URLSearchParams({
+            enablejsapi: '1',
+            rel: '0',
+            modestbranding: '1',
+            playsinline: '1',
+            autoplay: '0',
+            origin: location.origin
+        });
+
+        if (document.getElementById('player')) {
+            document.getElementById('player').src = `${base}?${params}`;
+        }
+    </script>
+</body>
+</html>
