@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/expense_Log"
+        android:title="Expense Log"
+        android:icon="@drawable/note" />
+    <item
+        android:id="@+id/budget"
+        android:title="Budget"
+        android:icon="@drawable/money" />
+    <item
+        android:id="@+id/savings_Circle"
+        android:title="Savings Circle"
+        android:icon="@drawable/people"/>
+    <item
+        android:id="@+id/chatbot"
+        android:title="Chatbot"
+        android:icon="@drawable/chat" />
+
+</menu>
