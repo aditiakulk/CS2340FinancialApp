@@ -1,0 +1,4 @@
+http://34.45.191.129:9000/
+user=admin
+pass=wFULgh51Ny$A6jKqYiUWeFhTxk45xlzL
+cs2340
