@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "172036668999",
+    "project_id": "cs2340-f25-team1",
+    "storage_bucket": "cs2340-f25-team1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172036668999:android:2a6e7b068509458dc33b62",
+        "android_client_info": {
+          "package_name": "com.example.sprintproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYwCgz6WzWBqe5s0DrptPrUro7-Bsk7II"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
