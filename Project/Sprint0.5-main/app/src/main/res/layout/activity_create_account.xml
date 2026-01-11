@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.example.sprintproject.viewmodel.CreateAccountViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DDDEDE">
+
+        <TextView
+            android:id="@+id/create_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp" />
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:text='@={vm.email}'
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:background="#E2EEF0"
+            app:layout_constraintTop_toBottomOf="@id/create_account_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text='@={vm.password}'
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="16dp"
+            android:background="#E2EEF0"
+            app:layout_constraintTop_toBottomOf="@id/email_edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text='@{vm.loading ? "Creating..." : "Register"}'
+            android:enabled='@{!vm.loading}'
+            android:alpha='@{vm.loading ? 0.6f : 1f}'
+            android:onClick='@{() -> vm.onRegisterClicked()}'
+            app:layout_constraintTop_toBottomOf="@id/password_edit_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

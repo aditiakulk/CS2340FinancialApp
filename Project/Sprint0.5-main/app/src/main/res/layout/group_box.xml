@@ -1,0 +1,76 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/cardview_dark_background"
+    app:cardBackgroundColor="#beadd1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/groupNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Group Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:ellipsize="end"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:backgroundTint="#bf2424"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/inviteButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/inviteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Invite"
+            android:backgroundTint="#545768"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/infoList"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/groupNameText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" >
+
+            <TextView
+                android:id="@+id/membersText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Members" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Include data from a previous chat?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="12dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnIncludeNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No" />
+
+        <Button
+            android:id="@+id/btnIncludeYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Yes" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvExistingLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a previous chat"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layoutSpinnerRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spPreviousChats"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnSendWithContext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCancelInclude"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

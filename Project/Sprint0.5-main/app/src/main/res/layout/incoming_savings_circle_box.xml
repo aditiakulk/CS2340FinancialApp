@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:padding="12dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvGroupName"
+        android:textStyle="bold" android:textSize="16sp"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvFrom"
+        android:textSize="14sp"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="end" android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:text="Decline" android:layout_marginEnd="8dp"
+            android:backgroundTint="#bf2424"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:text="Accept"
+            android:backgroundTint="#4b9b33"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

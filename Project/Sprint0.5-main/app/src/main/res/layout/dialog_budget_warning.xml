@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_dialog_bg"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvWarningTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Budget Warning"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@android:color/holo_orange_dark"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvWarningMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="You've reached 85% of your Entertainment budget"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvWarningTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/dividerWarning"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvWarningMessage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/warningDetails"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/dividerWarning"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tvBudgetCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category: ENTERTAINMENT"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvBudgetTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget Total: $500.00"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvSpentAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Spent: $425.00"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvRemainingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remaining: $75.00"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="85% of budget used"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBarBudget"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:max="100"
+            android:progress="85"
+            android:progressDrawable="@drawable/progress_bar_budget"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnWarningOK"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/warningDetails"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
